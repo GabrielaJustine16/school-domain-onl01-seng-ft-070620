@@ -1,5 +1,5 @@
 class School
-  ef sort 
+  def sort 
   nu_hash = {}
   roster.each do |x, y| 
     nu_hash[x] = y.sort 
