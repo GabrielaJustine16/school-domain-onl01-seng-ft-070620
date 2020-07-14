@@ -1,10 +1,22 @@
 class School
-  def sort 
-  nu_hash = {}
-  roster.each do |x, y| 
-    nu_hash[x] = y.sort 
-  end 
-  nu_hash
-end 
+	attr_accessor :roster, :name, :grade 
+	attr_reader :school 
+	
+	def initialize(school)
+    @school = school
+  end
   
-end 
+  def roster
+  	roster = {}
+  end 
+  
+  def add_student(name,grade)
+  	roster[grade] = []
+  	roster[grade] << name
+  		
+  end
+
+end
+
+
+School.new("R").roster.add_student("john",9)
